@@ -1,0 +1,11 @@
+eureka:
+    instance:
+        prefer-ip-address: true
+management:
+    context-path: /admin
+    port: 9001
+server:
+    port: 8761
+spring:
+    application:
+        name: eureka-server
