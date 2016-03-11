@@ -1,7 +1,6 @@
-package com.codetron.eureka.client1.controller;
+package com.codetron.eureka.client2.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,16 +11,17 @@ import org.springframework.web.client.RestTemplate;
  * Created by josete on 11/03/16.
  */
 @RestController
-public class RestController1 {
-
+public class RestController2 {
 
     @Autowired
-    @LoadBalanced
     private RestTemplate restTemplate;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/client1")
+
+    @RequestMapping(method = RequestMethod.GET, value = "/hello")
     public ResponseEntity<?> retrieveData() {
-        String response = restTemplate.getForObject("http://eureka-client2/hello",String.class);
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok("Hello from client2");
     }
+
+
 }
+
