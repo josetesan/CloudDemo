@@ -1,6 +1,12 @@
 eureka:
     instance:
         prefer-ip-address: true
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+
 management:
     context-path: /admin
     port: 9001
