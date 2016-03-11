@@ -1,0 +1,17 @@
+eureka-server:
+   build: EurekaServer/
+   ports:
+     - 8761:8761
+     - 9001:9001
+   
+eureka-client1:
+   build: EurekaClient1
+   links:
+     - eureka-server
+
+eureka-client2:
+   build: EurekaClient2
+   links:
+     - eureka-server
+
+   
