@@ -1,0 +1,32 @@
+eureka:
+    client:
+      service-url:
+        defaultZone: http://eureka-server:8761/eureka/
+    instance:
+        prefer-ip-address: true
+management:
+    context-path: /admin
+    port: 9100
+server:
+    port: 8080
+spring:
+    application:
+        name: zuul
+zuul:
+  ignored-services: "*"
+  routes:
+      zuul:
+         path: /admin
+      eureka-client1:
+         path: /client1/**
+      eureka-client2:
+         path: /client2/**
+
+
+
+
+
+
+
+
+
