@@ -14,4 +14,12 @@ eureka-client2:
    links:
      - eureka-server
 
-   
+zuul:
+  build: Zuul
+  ports:
+    - 9080:8080
+    - 9100:9100
+  links:
+     - eureka-server
+#     - eureka-client1
+#     - eureka-client2
