@@ -4,6 +4,7 @@ eureka:
         defaultZone: http://eureka-server:8761/eureka/
     instance:
         prefer-ip-address: true
+        status-page-url-path: ${management.context-path}/info
 management:
     context-path: /admin
 server:
