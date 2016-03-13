@@ -3,20 +3,16 @@ eureka-server:
    ports:
      - 8761:8761
      - 9001:9001
-   mem_limit: 200000000
-   
+     
 eureka-client1:
    build: EurekaClient1
    links:
      - eureka-server
-   mem_limit: 100000000     
 
 eureka-client2:
    build: EurekaClient2
    links:
      - eureka-server
-   mem_limit: 100000000     
-
 
 
 zuul:
@@ -26,4 +22,3 @@ zuul:
     - 9100:9100
   links:
      - eureka-server
-  mem_limit: 100000000     
