@@ -4,6 +4,7 @@ eureka:
         defaultZone: http://eureka-server:8761/eureka/
     instance:
         prefer-ip-address: true
+        status-page-url-path: ${management.context-path}/info
 management:
     context-path: /admin
     port: 9100
@@ -15,12 +16,14 @@ spring:
 zuul:
   ignored-services: "*"
   routes:
-      zuul:
-         path: /admin
       eureka-client1:
          path: /client1/**
       eureka-client2:
          path: /client2/**
+      zuul:
+         path: /admin/**
+
+
 
 
 

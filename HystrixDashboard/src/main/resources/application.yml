@@ -1,0 +1,7 @@
+management:
+    context-path: /admin
+server:
+    port: 7000
+spring:
+    application:
+        name: hystrix-dashboard

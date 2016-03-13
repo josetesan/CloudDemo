@@ -14,6 +14,12 @@ eureka-client2:
    links:
      - eureka-server
 
+hystrix-dashboard:
+   build: HystrixDashboard
+   ports:
+     - 7000:7000
+   links:
+     - eureka-server
 
 zuul:
   build: Zuul
