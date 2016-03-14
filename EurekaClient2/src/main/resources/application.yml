@@ -13,8 +13,3 @@ spring:
     application:
         name: eureka-client2
 
-
-
-
-
-http://172.17.0.5:36452/admin/info
