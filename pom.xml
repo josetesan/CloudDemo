@@ -16,7 +16,7 @@
     <module>Zuul</module>
     <module>HystrixDashboard</module>
     <module>Wallet</module>
-    <module>OAuthServer</moduel>
+    <module>OAuthServer</module>
   </modules>
 
 

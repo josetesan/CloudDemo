@@ -3,7 +3,14 @@ eureka-server:
    ports:
      - 8761:8761
      - 9001:9001
-     
+
+auth-server:
+   build: AuthServer
+   ports:
+      - 9999:8080
+   environment:
+      - EUREKA_SERVER=192.168.1.36
+
 eureka-client1:
    build: EurekaClient1
    environment: 
@@ -12,6 +19,11 @@ eureka-client1:
 eureka-client2:
    build: EurekaClient2
    environment: 
+      - EUREKA_SERVER=192.168.1.36
+
+wallet-service:
+   build: Wallet
+   environment:
       - EUREKA_SERVER=192.168.1.36
 
 hystrix-dashboard:
