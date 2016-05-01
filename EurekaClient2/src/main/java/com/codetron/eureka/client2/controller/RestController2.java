@@ -20,10 +20,6 @@ public class RestController2 implements ApplicationListener<EmbeddedServletConta
 
     private Integer runningPort;
 
-    @Autowired
-    private RestTemplate restTemplate;
-
-
     @RequestMapping(method = RequestMethod.GET, value = "/hello")
     public ResponseEntity<?> retrieveData() {
         final String response = String.format("Hello from client2 at port %s",runningPort);

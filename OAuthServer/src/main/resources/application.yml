@@ -1,8 +1,0 @@
-security:
-    oauth2:
-        client:
-            client-id: Unicef-Norway
-            client-secret: lgUnicef
-spring:
-  application:
-    name: Auth-Server

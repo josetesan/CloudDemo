@@ -1,0 +1,16 @@
+security:
+    oauth2:
+        client:
+            client-id: Unicef-Norway
+            client-secret: lgUnicef
+spring:
+  application:
+    name: Auth-Server
+
+eureka:
+    client:
+      service-url:
+        defaultZone: http://${EUREKA_SERVER}:8761/eureka/
+    instance:
+        prefer-ip-address: true
+        status-page-url-path: ${management.context-path}/info
