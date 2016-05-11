@@ -28,3 +28,13 @@ zuul:
     - 9100:9100
   links:
      - eureka-server
+
+zipkin:
+  build: ZipkinServer 
+  ports:
+    - 9180:8080
+  links:
+    - eureka-server
+  environment:
+    - EUREKA_SERVER=192.168.1.36
+    

@@ -15,6 +15,7 @@
     <module>EurekaClient2</module>    
     <module>Zuul</module>
     <module>HystrixDashboard</module>
+    <module>ZipkinServer</module>
   </modules>
 
 
